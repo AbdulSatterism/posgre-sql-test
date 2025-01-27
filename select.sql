@@ -137,3 +137,30 @@ SELECT title, user_name FROM post
     JOIN "user" ON post.user_id = "user".id;
 
 
+
+
+
+-- new table 
+
+CREATE Table orders(
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2)
+)
+
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
+    (1, '2023-01-15', 150.75),
+    (2, '2023-02-20', 200.50),
+    (3, '2023-03-10', 99.99),
+    (4, '2023-04-05', 250.00),
+    (5, '2023-05-25', 175.25),
+    (6, '2023-06-30', 300.00),
+    (7, '2023-07-15', 120.00),
+    (8, '2023-08-20', 180.75),
+    (9, '2023-09-10', 220.50),
+    (10, '2023-10-05', 199.99);
+
+
+
+SELECT 
